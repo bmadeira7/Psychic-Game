@@ -6,38 +6,19 @@
     <title>Psychic Guessing Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <!--setting up some css styles for my games look-->
-    <style>
-        .container {
-            background-color: lightpink;
-            height: 590px;
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 30px;
-            color: white;
-            border: 5px double black;
-            margin-top: 25px;
-        }
-
-        .jumbotron {
-            padding: 0px;
-        }
-
-        h1 {
-            font-size: 75px;
-        }
-
-        #you-answered {
-            color: black;
-        }
-    </style>
+    <!--linking to my external css page-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 <!--setting up the bootstrap grid layout-->
 
 <body>
     <div class="container">
+        <img class="fortune-teller" src="assets/images/Fortune-teller.jpg" alt=fortune teller>
         <div class="row">
             <div class="col">
+                ˆclick meˆ
                 <div class="jumbotron"></div>
                 <!--creating the title for the game-->
                 <h1>The Psychic Game</h1>
@@ -49,7 +30,7 @@
                 <!--creating p elements with id's that we can link to in our javascript-->
                 <p id="wins-text">Wins:</p>
                 <p id="losses-text">Losses:</p>
-                <p id="remaining-guesses">Guesses Left:</p>
+                <p>You have <span id="remaining-guesses">10</span> remaining guesses</p>
                 <p id="guessed">Your guesses so far:</p>
                 <p>You answered - <span id="you-answered">(TYPE A LETTER)</span></p>
             </div>
@@ -58,54 +39,7 @@
     </div>
 
 
-    <!--trying to define the answers the computer will choose from, and storing the array in the alphabet variable-->
-    <script>
-        var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
-            "s", "t", "u", "v", "w", "x", "y", "z"];
-
-        //creating variables to track specific game stats and info
-        var wins = 0;
-        var losses = 0;
-        var remainingTurns = 10;
-        var guessedSoFar = [];
-
-
-
-        var userText = document.getElementById("you-answered");
-        var winsText = document.getElementById("wins-text")
-        var lossesText = document.getElementById("losses-text");
-        var remainingGuesses = document.getElementById("remaining-guesses");
-        var guessedSoFar = document.getElementById("guessed");
-
-
-    
-
-        document.onkeyup = function (event) {
-
-            userText.textContent = event.key;
-            winsText.textContent = "Wins: " + wins;
-            lossesText.textContent = "Losses: " + losses;
-            remainingGuesses.textContent = "You have " + remainingTurns + " remaining guesses"
-          
-
-        }
-
-
-
-        var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-        console.log(computerChoice);
-
-
-
-        if (computerChoice === userText) {
-            alert("you guessed it!")
-        }
-
-
-
-
-    </script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
