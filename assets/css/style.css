@@ -3,14 +3,14 @@
             /* background-color: rgb(188, 0, 212); */
             background-image: url(" ../images/HeroBackground.jpg");
             background-size: 650px;
-            height: 650px;
+            height: 700px;
             text-align: center;
             font-family: 'Trebuchet MS', sans-serif;
-            font-size: 23px;
-            color: white;
+            font-size: 26px;
+            color: oldlace;
             border: 5px double black;
             margin-top: 25px;
-            text-shadow: 4px 1px #000000;
+            text-shadow: 2px 1px blue;
     
         }
     
@@ -19,15 +19,21 @@
         }
     
         h1 {
-            font-size: 45px;
+            font-size: 55px;
         }
     
         #you-answered {
-            color: rgb(255, 251, 0);
+            color:orange;
+            text-shadow: 2px 1px black;
         }
     
         .fortune-teller {
             width: 200px;
             margin-top: 15px;
+            border: 5px solid orange;
         }
         
+        .click-me {
+            color: orange;
+            text-shadow: 2px 1px black;
+        }

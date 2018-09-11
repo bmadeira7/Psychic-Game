@@ -61,6 +61,7 @@
          gameInit();
          winsText.textContent = "Wins: " + wins;
          console.log(wins);
+         guessesReset
 
          console.log("The Computer Chose: " + computerChoice);
      }
@@ -74,9 +75,10 @@
          //what im trying to say here is, if remaining guesses run out to zero, reset the game
          //but of course, it doesnt work
          if (remainingTurns === 0) {
-             gameInit()
+             gameInit();
+             losses++;
          }
-         ;
+         
      }
  }
 
