@@ -19,7 +19,7 @@
 
  //creating variables to link to my <p> elements
  var userText = document.getElementById("you-answered");
- var winsText = document.getElementById("wins-text")
+ var winsText = document.getElementById("wins-text");
  var lossesText = document.getElementById("losses-text");
  var remainingGuessesSpan = document.getElementById("remaining-guesses");
  var guessedSoFar = document.getElementById("guessed");
@@ -28,6 +28,7 @@
      remainingTurns = 10;
      guessedAnswers = [];
      computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)]
+     userText.textContent = "Choose A Letter";
  }
 
  var guessesReset = []
@@ -40,8 +41,9 @@
 
  document.onkeyup = function (event) {
 
-    
-     console.log(userText)
+    console.log(event.key);
+     console.log(userText);
+     
      userText.textContent = event.key;
      winsText.textContent = "Wins: " + wins;
      lossesText.textContent = "Losses: " + losses;
