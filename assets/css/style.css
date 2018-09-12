@@ -3,11 +3,11 @@
             /* background-color: rgb(188, 0, 212); */
             background-image: url(" ../images/HeroBackground.jpg");
             background-size: 650px;
-            height: 700px;
+            height: 730px;
             text-align: center;
             font-family: 'Trebuchet MS', sans-serif;
             font-size: 26px;
-            color: oldlace;
+            color: rgb(238, 196, 255);
             border: 5px double black;
             margin-top: 25px;
             text-shadow: 2px 1px blue;
@@ -16,6 +16,14 @@
     
         .jumbotron {
             padding: 0px;
+        }
+        .wrapper {
+            
+            background-color:rgba(5, 0, 0, 0.589);
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: -19px;
+            border-radius: 70%;
         }
     
         h1 {
@@ -36,4 +44,5 @@
         .click-me {
             color: orange;
             text-shadow: 2px 1px black;
+            font-size: 18px;
         }
